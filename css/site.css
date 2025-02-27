@@ -34,14 +34,14 @@ nav{
 nav a{
     color: white;
     text-decoration: none;
-    text-align: left;
+    text-align: center;
 }
 
 nav .opcao{
     float: left;
-    width: 31,3%;
+    width: 300px;
     background-color: #b1ccf5;
-    padding: 10px 0;
+    padding: 0px 10px;
     margin: 0 1%;
     font-size: 26px;
     
