@@ -109,3 +109,34 @@ section p{
     text-align: center;
     margin: 10px 80px;
 }
+
+.tabelaProdutos{
+    margin: 10px auto;
+    text-align: center;
+}
+
+.tituloTabela{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    padding: 5px;
+    border: transparent;
+}
+
+tr,td,th{
+    border: 1px, solid #B0C4DE;
+    padding: 5px;
+}
+
+tr,td{
+    font-size: 14px;
+}
+
+tr:nth-child(even){
+    background-color: #b1ccf5;
+}
+
+tr:nth-child(odd){
+    background-color: #83afd3;
+}
