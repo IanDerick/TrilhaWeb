@@ -19,6 +19,11 @@ function validaFaleConosco(){
         document.frmfaleconosco.selmotivo.focus();
         return false;
     }
+    if (document.frmfaleconosco.selproduto.value=="") {
+        alert("Preencha o campo Produto");
+        document.frmfaleconosco.selproduto.focus()
+        return false
+    }
     if(document.frmfaleconosco.txacomentario.value==""){
         alert("Preencha o campo Comentário.");
         document.frmfaleconosco.txacomentario.focus();
@@ -28,22 +33,21 @@ function validaFaleConosco(){
 }
 
 function verificaMotivo(motivo){
-    var elemento = document.getElementById("opacaoProduto");
+    var elemento = document.getElementById("opcaoProduto");
 
     if (motivo=="PR") {
         var select = document.createElement("select");
         select.setAttribute("name", "selproduto");
 
         var option = document.createElement("option");
-        option = setAttribute("value", "");
+        option.setAttribute("value", "");
 
         var texto = document.createTextNode("Escolha");
         option.appendChild(texto);
-
         select.appendChild(option);
         
         var option = document.createElement("option");
-        option = setAttribute("value", "FR");
+        option.setAttribute("value", "FR");
         
         var texto = document.createTextNode("Freezer");
         option.appendChild(texto);
@@ -57,5 +61,11 @@ function verificaMotivo(motivo){
         option.appendChild(texto);
 
         select.appendChild(option);
+
+        elemento.appendChild(select);
+    }else{
+        if(elemento.firstChild){
+            elemento.removeChild(elemento.firstChild);
+        }
     }
 }
