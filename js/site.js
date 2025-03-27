@@ -83,3 +83,9 @@ function verificaMotivo(motivo){
         }
     }
 }
+
+$(document).ready(function(){
+    $("header").load("/front-end/TrilhaWeb/pages/site/general/cabecalho.html");
+    $("nav").load("/front-end/TrilhaWeb/pages/site/general/menu.html");
+    $("footer").load("/front-end/TrilhaWeb/pages/site/general/rodape.html");
+});
